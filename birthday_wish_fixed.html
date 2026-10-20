@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday! 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:#fff;overflow-x:hidden}
+.page{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 18px;position:relative;overflow:hidden}
+#page1{background:linear-gradient(135deg,#ff4e8a,#ff9a44,#7657e8);background-size:300% 300%;animation:bg 10s ease infinite}
+#page2{background:linear-gradient(135deg,#654ea3,#eaafc8)}
+#page3{background:linear-gradient(135deg,#f857a6,#ff5858,#ffc371)}
+#page4{background:linear-gradient(135deg,#ffecd2,#fcb69f);color:#54233f}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+h1{font-family:Pacifico,cursive;font-size:clamp(2.5rem,9vw,5.5rem);line-height:1.2;text-shadow:0 5px 20px #7b245c88;animation:pop 1.2s ease both}
+h2{font-family:'Dancing Script',cursive;font-size:clamp(2.2rem,7vw,4rem);margin-bottom:24px}
+p{line-height:1.8}
+.subtitle{font-family:'Dancing Script',cursive;font-size:clamp(1.4rem,5vw,2.5rem);margin:22px 0}
+button{font:600 1rem Poppins,sans-serif;border:0;border-radius:40px;padding:14px 25px;cursor:pointer;box-shadow:0 7px 22px #0003;transition:transform .2s}
+button:active{transform:scale(.96)}
+.start-btn{margin-top:25px;background:#fff;color:#d63384}
+.nav{position:fixed;bottom:15px;z-index:10;display:flex;gap:12px;left:50%;transform:translateX(-50%);width:max-content;max-width:96%}
+.nav button{background:#fff;color:#8a2b72;padding:11px 18px}
+.sound{position:fixed;right:14px;top:14px;z-index:20;border-radius:50%;width:48px;height:48px;padding:0;background:#fff;font-size:1.2rem}
+.float{position:absolute;font-size:clamp(25px,5vw,42px);animation:float 4s ease-in-out infinite;pointer-events:none}
+@keyframes float{50%{transform:translateY(-25px) rotate(12deg)}}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+.confetti{position:fixed;top:-15px;width:9px;height:13px;z-index:30;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.card{max-width:760px;width:100%;padding:clamp(22px,5vw,45px);border:1px solid #ffffff77;border-radius:28px;background:#ffffff22;box-shadow:0 15px 40px #0002;backdrop-filter:blur(8px)}
+.message{font-size:clamp(1rem,3vw,1.2rem)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:18px;width:min(100%,1000px)}
+.photo-card{background:white;color:#333;border-radius:20px;padding:12px;box-shadow:0 10px 25px #0003;animation:pop .7s both}
+.photo-card img{display:block;width:100%;height:220px;object-fit:cover;border-radius:14px}
+.photo-card p{padding:10px 4px;font-weight:600}
+.cake{font-size:clamp(5rem,18vw,9rem);animation:bounce 2s infinite}
+@keyframes bounce{50%{transform:translateY(-12px) rotate(3deg)}}
+.small{margin-top:12px;font-size:.9rem}
+@media(max-width:420px){.gallery{grid-template-columns:1fr}.photo-card img{height:210px}.nav button{padding:10px 13px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<button class="sound" id="soundBtn" onclick="toggleSound()" aria-label="Toggle music">🔇</button>
+<audio id="music" loop preload="none">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<section id="page1" class="page">
+  <span class="float" style="left:8%;top:13%">🎈</span>
+  <span class="float" style="right:8%;top:20%;animation-delay:.7s">💖</span>
+  <span class="float" style="left:12%;bottom:16%;animation-delay:1s">✨</span>
+  <span class="float" style="right:12%;bottom:17%;animation-delay:1.4s">🎉</span>
+  <p>✨ A special day for a special person ✨</p>
+  <h1>Happy Birthday!</h1>
+  <div class="subtitle">Wishing you love, laughter & happiness 💗</div>
+  <button class="start-btn" onclick="goTo('page2');celebrate()">Open Your Surprise 🎁</button>
+</section>
+
+<section id="page2" class="page">
+  <div class="card">
+    <h2>For You 💌</h2>
+    <p class="message">May your birthday be full of smiles, beautiful memories, and little moments that make you happy. May the year ahead bring you success, peace, and everything you are wishing for. Keep shining and always keep that lovely smile! 🎂💖</p>
+    <p class="subtitle">You deserve a wonderful day! 🌸</p>
+  </div>
+</section>
+
+<section id="page3" class="page">
+  <h2>Little Birthday Memories 📸</h2>
+  <div class="gallery">
+    <article class="photo-card">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debabf?auto=format&fit=crop&w=900&q=85" alt="Colorful birthday balloons" onerror="this.src='https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85'">
+      <p>Colorful moments 🎈</p>
+    </article>
+    <article class="photo-card">
+      <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=85" alt="Birthday cake">
+      <p>Sweet celebrations 🎂</p>
+    </article>
+    <article class="photo-card">
+      <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=85" alt="Party decorations">
+      <p>Beautiful memories ✨</p>
+    </article>
+  </div>
+  <p class="small">Photos load from the internet, so keep data/Wi-Fi on.</p>
+</section>
+
+<section id="page4" class="page">
+  <div class="cake">🎂</div>
+  <h1 style="font-size:clamp(2.3rem,8vw,4.5rem);color:#b83280">Make a Wish!</h1>
+  <p class="message" style="margin:20px 0">Close your eyes, make a wish, and let the magic begin. 🕯️💫</p>
+  <button class="start-btn" onclick="blowCandles()">Blow the Candles 🌬️</button>
+  <p id="wishMessage" class="subtitle" aria-live="polite"></p>
+  <button onclick="goTo('page1')" style="margin-top:10px;background:#fff;color:#b83280">Back to Start ↻</button>
+</section>
+
+<div class="nav">
+  <button onclick="goTo('page1')">🏠 Home</button>
+  <button onclick="goTo('page2')">💌 Message</button>
+  <button onclick="goTo('page3')">📸 Photos</button>
+  <button onclick="goTo('page4')">🎂 Cake</button>
+</div>
+
+<script>
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+function celebrate(){
+  const emojis=['🎉','💖','✨','🎊','🎈'];
+  for(let i=0;i<45;i++){
+    const c=document.createElement('div');
+    c.className='confetti';
+    c.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    c.style.left=Math.random()*100+'vw';
+    c.style.fontSize=(14+Math.random()*20)+'px';
+    c.style.animationDuration=(2+Math.random()*3)+'s';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5200);
+  }
+}
+async function toggleSound(){
+  const music=document.getElementById('music');
+  const btn=document.getElementById('soundBtn');
+  if(music.paused){
+    try{await music.play();btn.textContent='🔊';}
+    catch(e){btn.textContent='🔇';alert('Music start nahi hua. Internet check karke dobara try karein.');}
+  }else{music.pause();btn.textContent='🔇';}
+}
+function blowCandles(){
+  document.getElementById('wishMessage').textContent='🎉 Wish sent! May all your dreams come true! 💖';
+  celebrate();
+}
+window.addEventListener('load',celebrate);
+</script>
+</body>
+</html>
