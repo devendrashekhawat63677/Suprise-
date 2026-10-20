@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Pragati Sharma ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #240046, #9d174d, #ff758f);
+    overflow-x: hidden;
+}
+
+header {
+    padding: 45px 15px 25px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ffe6a7;
+    text-shadow: 0 0 18px #ff4d9d;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 0 10px;
+}
+
+.name {
+    color: #fff0a8;
+    display: block;
+    margin-top: 10px;
+    font-size: 38px;
+}
+
+.heart {
+    font-size: 45px;
+    animation: beat 1s infinite alternate;
+}
+
+.gallery {
+    width: 92%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.card {
+    background: #ffffff16;
+    border: 1px solid #ffffff55;
+    border-radius: 22px;
+    padding: 15px;
+    margin: 28px 0;
+    box-shadow: 0 8px 30px #00000030;
+    animation: appear 1s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+}
+
+.card h2 {
+    color: #ffe6a7;
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 12px 5px;
+}
+
+button {
+    background: linear-gradient(45deg, #ffb3c6, #ffe6a7);
+    color: #65002d;
+    border: none;
+    padding: 16px 25px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+    box-shadow: 0 0 20px #ff8fab70;
+}
+
+button:active {
+    transform: scale(.96);
+}
+
+#surprise {
+    display: none;
+    width: 90%;
+    max-width: 470px;
+    margin: 20px auto 40px;
+    padding: 25px 18px;
+    border-radius: 25px;
+    background: #ffffff20;
+    border: 1px solid #ffffff70;
+    animation: appear 1s ease;
+}
+
+#surprise h2 {
+    color: #ffe6a7;
+    font-size: 27px;
+}
+
+#surprise p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+footer {
+    padding: 25px 12px 40px;
+    line-height: 1.8;
+}
+
+.floating {
+    position: fixed;
+    bottom: -50px;
+    pointer-events: none;
+    z-index: 10;
+    animation: floatUp 6s linear forwards;
+}
+
+@keyframes beat {
+    to { transform: scale(1.18); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="heart">💖🎂💖</div>
+
+    <h1>
+        Happy Birthday
+        <span class="name">Pragati Sharma</span>
+    </h1>
+
+    <p class="subtitle">
+        Today is all about celebrating YOU! 🌸<br>
+        A beautiful soul deserves a beautiful day. ✨
+    </p>
+</header>
+
+<div class="gallery">
+
+    <!-- PHOTO 1 -->
+    <div class="card">
+        <img src="photo1.jpg" alt="Pragati in a beautiful saree">
+
+        <h2>🌷 A Beautiful Smile</h2>
+
+        <p>
+            "Your smile has a magical way of making
+            every moment brighter and every day more beautiful." 💗
+        </p>
+    </div>
+
+    <!-- PHOTO 2 -->
+    <div class="card">
+        <img src="photo2.jpg" alt="Pragati in a red dress">
+
+        <h2>❤️ Simply Wonderful</h2>
+
+        <p>
+            "Never stop being the amazing person you are.
+            The world is more beautiful with your light in it." ✨
+        </p>
+    </div>
+
+    <!-- PHOTO 3 -->
+    <div class="card">
+        <img src="photo3.jpg" alt="Pragati in a yellow saree">
+
+        <h2>🌻 Sunshine Girl</h2>
+
+        <p>
+            "May your life always be filled with sunshine,
+            endless laughter, and countless reasons to smile." ☀️
+        </p>
+    </div>
+
+    <!-- PHOTO 4 -->
+    <div class="card">
+        <img src="photo4.jpg" alt="Pragati in traditional attire">
+
+        <h2>👑 One of a Kind</h2>
+
+        <p>
+            "Some people are special without even trying.
+            You are one of those rare and beautiful souls." 💕
+        </p>
+    </div>
+
+    <!-- PHOTO 5 -->
+    <div class="card">
+        <img src="photo5.jpg" alt="Pragati enjoying a beautiful view">
+
+        <h2>🦋 Beautiful Memories</h2>
+
+        <p>
+            "May this new chapter bring you wonderful adventures,
+            peaceful moments, and dreams coming true." 🌈
+        </p>
+    </div>
+
+</div>
+
+<button onclick="openSurprise()">
+    🎁 Open Your Special Surprise 💖
+</button>
+
+<div id="surprise">
+    <div style="font-size:55px;">🎂💝🎉</div>
+
+    <h2>A Special Message For You ❤️</h2>
+
+    <p>
+        Dear Pragati Sharma,<br><br>
+
+        On your special day, I wish you endless happiness,
+        beautiful memories, and all the success your heart desires. 🌸<br><br>
+
+        May every new day bring you something to smile about.
+        May your dreams grow bigger and your worries grow smaller. ✨<br><br>
+
+        Always remember how special you are.
+        Keep smiling, keep shining, and never stop being yourself. 💖<br><br>
+
+        <strong>Happy Birthday, Pragati! 🎂</strong><br><br>
+
+        May your year be as wonderful as your smile. 🌷
+    </p>
+
+    <div style="font-size:40px;">💖🌹🦋🎈</div>
+</div>
+
+<footer>
+    Made with ❤️ and lots of good wishes<br>
+    Just for Pragati Sharma 🎀
+</footer>
+
+<script>
+function createFloatingHeart() {
+    const item = document.createElement("div");
+
+    item.className = "floating";
+
+    const emojis = ["💖", "💕", "❤️", "✨", "🌸", "🎈"];
+    item.textContent =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.fontSize = (18 + Math.random() * 20) + "px";
+    item.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 8000);
+}
+
+function openSurprise() {
+    const surprise = document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createFloatingHeart, i * 100);
+    }
+
+    setTimeout(() => {
+        surprise.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }, 100);
+}
+
+setInterval(createFloatingHeart, 900);
+</script>
+
+</body>
+          </html>
